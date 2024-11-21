@@ -1,2 +1,3 @@
-// Main library export site
-// Use playground app (via Vite) to test and document the library
+export { default as PlaidEmbeddedLink } from "./components/PlaidEmbeddedLink";
+export { default as PlaidLink } from "./components/PlaidLink";
+export { default as createPlaidLink } from "./hooks/createPlaidLink";

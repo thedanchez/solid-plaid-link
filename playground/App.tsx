@@ -1,19 +1,44 @@
-import { createSignal } from "solid-js";
+import { createScript } from "solid-create-script";
+import { createEffect, createSignal, Show } from "solid-js";
+
+import { Second } from "./Second";
+import { Third } from "./Third";
 
 export const App = () => {
-  const [count, setCount] = createSignal(0);
+  const [showSecond, setShowSecond] = createSignal(false);
+  const [showThird, setShowThird] = createSignal(false);
+
+  const script = createScript("https://cdn.plaid.com/link/v2/stable/link-initialize.js", { defer: true });
+
+  createEffect(() => {
+    console.log("Script Error State: ", script.error.message);
+  });
 
   return (
     <div>
       <div>Playground App</div>
-      <div>Count: {count()}</div>
+      <div>Script Loading State: {script.loading.toString()}</div>
+      <div>Script Error: {script.error?.message}</div>
       <button
         onClick={() => {
-          setCount((prev) => prev + 1);
+          setShowSecond((prev) => !prev);
         }}
       >
-        Increment Count
+        Toggle Second
       </button>
+      <button
+        onClick={() => {
+          setShowThird((prev) => !prev);
+        }}
+      >
+        Toggle Third
+      </button>
+      <Show when={showSecond()}>
+        <Second />
+      </Show>
+      <Show when={showThird()}>
+        <Third />
+      </Show>
     </div>
   );
 };
