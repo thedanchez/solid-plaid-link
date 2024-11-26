@@ -6,7 +6,6 @@ import type { CreatePlaidLinkConfig } from "../types";
 
 type PlaidLinkProps = CreatePlaidLinkConfig &
   JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
-    readonly onReady?: () => void;
     readonly onLoadError?: (error: Error) => void;
   };
 
@@ -49,11 +48,6 @@ const PlaidLink = (props: ParentProps<PlaidLinkProps>) => {
   const { ready, error, plaidLink } = createPlaidLink(() => plaidProps);
 
   createEffect(() => {
-    if (!ready()) return;
-    props.onReady?.();
-  });
-
-  createEffect(() => {
     if (!error()) return;
     props.onLoadError?.(error() as Error);
   });
@@ -61,7 +55,7 @@ const PlaidLink = (props: ParentProps<PlaidLinkProps>) => {
   return (
     <button
       {...otherBtnProps}
-      disabled={!ready() || Boolean(error()) || Boolean(localProps.disabled)}
+      disabled={!ready() || Boolean(localProps.disabled)}
       onClick={(e) => {
         if (typeof localProps.onClick === "function") {
           localProps.onClick?.(e);
