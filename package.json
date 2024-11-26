@@ -1,6 +1,6 @@
 {
   "name": "@danchez/solid-plaid-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for integrating Plaid Link into SolidJS applications.",
   "type": "module",
   "author": "Daniel Sanchez <dsanc89@icloud.com>",
