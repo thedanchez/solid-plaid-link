@@ -2,7 +2,7 @@
   <img width="100%" src="https://assets.solidjs.com/banner?type=Ecosystem&background=tiles&project=solid-plaid-link" alt="solid-plaid-link">
 </p>
 
-[![NPM Version](https://img.shields.io/npm/v/solid-plaid-link.svg?style=for-the-badge)](https://www.npmjs.com/package/solid-plaid-link) [![Build Status](https://img.shields.io/github/actions/workflow/status/thedanchez/solid-plaid-link/ci.yaml?branch=main&logo=github&style=for-the-badge)](https://github.com/thedanchez/solid-plaid-link/actions/workflows/ci.yaml) [![bun](https://img.shields.io/badge/maintained%20with-bun-cc00ff.svg?style=for-the-badge&logo=bun)](https://bun.sh/)
+[![NPM Version](https://img.shields.io/npm/v/%40danchez%2Fsolid-plaid-link.svg?style=for-the-badge)](https://www.npmjs.com/package/solid-plaid-link) [![Build Status](https://img.shields.io/github/actions/workflow/status/thedanchez/solid-plaid-link/ci.yaml?branch=main&logo=github&style=for-the-badge)](https://github.com/thedanchez/solid-plaid-link/actions/workflows/ci.yaml) [![bun](https://img.shields.io/badge/maintained%20with-bun-cc00ff.svg?style=for-the-badge&logo=bun)](https://bun.sh/)
 
 # Solid Plaid Link
 
