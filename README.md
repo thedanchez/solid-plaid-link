@@ -6,6 +6,17 @@
 
 # Solid Plaid Link
 
+> ⚠️ **Deprecated: Use [`@dschz/solid-plaid-link`](https://www.npmjs.com/package/@dschz/solid-plaid-link) instead**
+>
+> This package is no longer maintained. It has been replaced by a complete reimplementation:
+>
+> - Uses idiomatic SolidJS patterns
+> - Adds built-in caching for Plaid Link tokens
+> - Fully tested and SSR-aware
+> - Cleaner developer experience
+>
+> 👉 Upgrade to [`@dschz/solid-plaid-link`](https://www.npmjs.com/package/@dschz/solid-plaid-link)
+
 Library for integrating with [Plaid Link](https://plaid.com/docs/link/) in your SolidJS applications.
 
 _Note: This is an unofficial Solid fork based on the official [react-plaid-link](https://github.com/plaid/react-plaid-link) library._
