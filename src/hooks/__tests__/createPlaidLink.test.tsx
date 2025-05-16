@@ -1,5 +1,5 @@
+import { createScript } from "@dschz/solid-create-script";
 import { waitFor } from "@solidjs/testing-library";
-import { createScript } from "solid-create-script";
 import { createRoot } from "solid-js";
 import { afterEach, beforeEach, describe, expect, it, type MockedFunction, vi } from "vitest";
 
@@ -7,7 +7,7 @@ import { createFakeResource } from "../../testUtils";
 import type { PlaidHandler } from "../../types";
 import createPlaidLink from "../createPlaidLink";
 
-vi.mock("solid-create-script");
+vi.mock("@dschz/solid-create-script");
 const mockCreateScript = createScript as MockedFunction<typeof createScript>;
 
 const TEST_TOKEN = "test-token";
@@ -223,7 +223,7 @@ describe("HOOK: createPlaidLink", () => {
     vi.setSystemTime(new Date(2024, 10, 24).getTime());
 
     const setTimeoutMock = vi.spyOn(global, "setTimeout").mockImplementation(() => {
-      return 1234 as unknown as Timer;
+      return 1234 as unknown as NodeJS.Timeout;
     });
 
     mockCreateScript.mockImplementationOnce(() =>
